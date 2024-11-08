@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .header-table {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            padding-top: 0%;
+        }
+
+        .header-table td {
+            border-radius: 50%;
+            padding: 10px;
+            padding-top: 0%;
+        }
+
+        ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 18px;
+            }
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
+            }
+            li.dropdown {
+                display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: yellow;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            color: white;
+            background-color: #800000; /* Dark red color */
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .apply-button {
+            color: white;
+            background-color: #800000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar {
+            width: 100%;
+                background-color: #07e8ef;
+                position: fixed; /* Fixed header */
+                top: 0;
+                z-index: 1000;
+                padding: 10px;
+                background-color: #07e8ef;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+
+            footer {
+            background-color: red;
+            height: 30px;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+        .footer {
+                background-color: red;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                margin-top: 8%;
+                }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                flex: 1 0 100%;
+                padding: 5px 0;
+            }
+
+            li a {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+
+            li a {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+
+            .button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="logo (2).png" width="150px" height="150px" alt="my logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li ><a href="Log in.html">Log In</a></li>
+            <li ><a href="form.html">Registration Form</a></li>
+            <li ><a href="News.html">News</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#about us">About Us</a>
+                <div class="dropdown-content">
+                    <a href="form.html">Registration</a>
+                    <a href="email.html">E-mail</a>
+                    <a href="Cources.html">Courses</a>
+                </div>
+            </li>
+            <li ><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>New Student Registration Form</h2>
+        <form action="/submit-your-form-processing-url" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="Gender">Gender:</label>
+            <label for="Gender"><input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female" required> Female</label><br><br>
+
+            <label for="program">Program of Interest:</label>
+            <select id="program" name="program" required>
+                <option value="Faculty of Information Technology">Faculty of Information Technology</option>
+                <option value="Faculty of Design and Fine Arts">Faculty of Design and Fine Arts</option>
+                <option value="Faculty of Environmental Studies">Faculty of Environmental Studies</option>
+                <option value="Faculty of Law">Faculty of Law</option>
+                <option value="Faculty of Agriculture">Faculty of Agriculture</option>
+                <option value="Faculty of Education">Faculty of Education</option>
+                <option value="Faculty of Medicine">Faculty of Medicine</option>
+                <option value="Faculty of Business">Faculty of Business</option>
+                <option value="Faculty of Engineering">Faculty of Engineering</option>
+                <option value="Faculty of Arts and Humanities"></option>
+            </select>
+
+            <input type="submit" value="Register">
+            <a href="index.html" class="button"> Back Home</a>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Rugera University. All rights reserved.</p>
+    </footer>
+</body>
+</html>

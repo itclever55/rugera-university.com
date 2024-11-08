@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(download.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+            font-size: large;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(7, 7, 7);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        li a {
+            display: block;
+            color:white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: larger; /* Responsive font size */
+            border-radius: 5px;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: yellow;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .header-table {
+            width: 100%;
+            background-color: #07e8ef;
+            position: fixed; /* Fixed header */
+            top: 0;
+            z-index: 1000;
+            padding: 10px;
+        }
+
+        .container {
+            width: 90%; /* Set to a percentage for responsiveness */
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        dt {
+            background-color: red;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            padding: 10px;
+            width: 50%;
+        }
+        .navbar {
+                background-color: #07e8ef;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+
+        dd {
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-weight: bolder;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .button {
+            color: white;
+            background-color: #800000;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background-color: red;
+            height: 30px;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        
+        }
+        .footer {
+                background-color: red;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                margin-top: 2%;
+                }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            li a {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            dt, dd {
+                font-size: 1rem;
+            }
+
+            .header-table td {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            li a {
+                font-size: 1rem; /* Smaller font size for mobile devices */
+                padding: 10px;
+            }
+
+            dt, dd {
+                font-size: 0.9rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html"><img src="logo (2).png" width="150px" height="150px" alt="my logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li ><a href="Log in.html">Log In</a></li>
+            <li ><a href="form.html">Registration Form</a></li>
+            <li ><a href="News.html">News</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#about us">About Us</a>
+                <div class="dropdown-content">
+                    <a href="form.html">Registration</a>
+                    <a href="email.html">E-mail</a>
+                    <a href="Cources.html">Courses</a>
+                </div>
+            </li>
+            <li ><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <h1>NEWS ABOUT OUR FACULTIES</h1>
+
+    <div class="container">
+        <dt>Information Technology:</dt>
+        <dd>Universities are expanding their data science programs to meet the demand for professionals skilled in big data analysis.</dd>
+        <dt>Design and Fine Arts:</dt>
+        <dd>Collaborative projects between design students and local businesses are fostering innovation and practical experience in the creative industries.</dd>
+        <dt>Environmental Studies:</dt>
+        <dd>Research initiatives are increasing to develop sustainable urban planning practices, addressing urbanization challenges.</dd>
+        <dt>Law:</dt>
+        <dd>Many law schools are offering specializations in environmental law, reflecting a growing focus on climate-related legal issues.</dd>
+        <dt>Agriculture:</dt>
+        <dd>Faculty members are exploring alternative protein sources, such as lab-grown meat and plant-based options, to promote sustainable food systems.</dd>
+        <dt>Education:</dt>
+        <dd>Hybrid learning models are being refined, blending online and in-person teaching methods to improve accessibility.</dd>
+        <dt>Medicine:</dt>
+        <dd>Medical schools are placing more emphasis on holistic patient care, integrating courses on empathy and communication skills.</dd>
+        <dt>Business:</dt>
+        <dd>Courses on entrepreneurship are gaining traction, with universities hosting startup competitions to encourage innovation among students.</dd>
+        <dt>Engineering:</dt>
+        <dd>Students are increasingly involved in community projects, applying engineering solutions to local infrastructure challenges.</dd>
+        <dt>Arts and Humanities:</dt>
+        <dd>Virtual galleries and online exhibitions are becoming popular, allowing students to showcase their work to a global audience.</dd>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="button">Back Home</a>
+    </div>
+   
+        <footer  class="footer">
+            &copy; 2024 Rugera University. All rights reserved.
+        </footer>
+    
+
+</body>
+</html>
